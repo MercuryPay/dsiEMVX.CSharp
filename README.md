@@ -38,7 +38,7 @@ The request looks like this:
   <Admin>
     <HostOrIP>127.0.0.1</HostOrIP>
     <IpPort>9000</IpPort>
-    <MerchantID>337234003</MerchantID>
+    <MerchantID>003503902913105</MerchantID>
     <TranCode>EMVParamDownload</TranCode>
     <SecureDevice>EMV_VX805_MERCURY</SecureDevice>
     <ComPort>9</ComPort>
@@ -86,7 +86,7 @@ Below is a sample EMV Sale transaction.
   <Transaction>
     <HostOrIP>127.0.0.1</HostOrIP>
     <IpPort>9000</IpPort>
-    <MerchantID>337234003</MerchantID>
+    <MerchantID>003503902913105</MerchantID>
     <TranCode>EMVSale</TranCode>
     <SecureDevice>EMV_VX805_MERCURY</SecureDevice>
     <ComPort>9</ComPort>
@@ -137,7 +137,7 @@ Here is the response to the above EMVSale transaction.  You will see that this i
 		</Amount>
 	</TranResponse>
 	<PrintData>
-		<Line1>.MERCHANT ID: 337234003</Line1>
+		<Line1>.MERCHANT ID: 003503902913105</Line1>
 		<Line2>.</Line2>
 		<Line3>.                  SALE                  </Line3>
 		<Line4>.</Line4>

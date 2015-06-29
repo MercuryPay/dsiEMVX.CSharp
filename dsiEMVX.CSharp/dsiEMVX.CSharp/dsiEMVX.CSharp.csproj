@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmountGenerator.cs" />
+    <Compile Include="EMVProcessor\EMVParamDownloadProcessor.cs" />
+    <Compile Include="EMVProcessor\EMVReturnProcessor.cs" />
+    <Compile Include="EMVProcessor\EMVSaleProcessor.cs" />
+    <Compile Include="EMVProcessor\EMVPadResetProcessor.cs" />
     <Compile Include="EMVRequest.cs" />
     <Compile Include="EMVTransactions.cs" />
     <Compile Include="ConfigurationData.cs" />
@@ -54,8 +59,13 @@
     <Compile Include="frmDsiEMVX.Designer.cs">
       <DependentUpon>frmDsiEMVX.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMVProcessor\IEMVTransactionProcessor.cs" />
+    <Compile Include="InvoiceGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EMVProcessor\TransactionProcessFactory.cs" />
+    <Compile Include="SequenceNoManager.cs" />
+    <Compile Include="TransactionData.cs" />
     <Compile Include="XMLHelper.cs" />
     <EmbeddedResource Include="frmDsiEMVX.resx">
       <DependentUpon>frmDsiEMVX.cs</DependentUpon>
@@ -92,6 +102,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sequenceno.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,11 +11,17 @@ namespace dsiEMVX.CSharp
     {
         public string NetEPayServer = string.Empty;
         public string MerchantId = string.Empty;
+        public string ComPort = string.Empty;
+        public string SecureDevice = string.Empty;
+        public string IpPort = string.Empty;
 
         public ConfigurationData()
         {
             NetEPayServer = ConfigurationManager.AppSettings["NETePay"];
             MerchantId = ConfigurationManager.AppSettings["MerchantId"];
+            ComPort = ConfigurationManager.AppSettings["ComPort"];
+            IpPort = ConfigurationManager.AppSettings["IpPort"];
+            SecureDevice = ConfigurationManager.AppSettings["SecureDevice"];
         }
     }
 }

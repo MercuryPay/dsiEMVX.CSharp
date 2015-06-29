@@ -39,6 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSendTransaction = new System.Windows.Forms.Button();
             this.lblClock = new System.Windows.Forms.Label();
+            this.btnRandomAmount = new System.Windows.Forms.Button();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblInvoice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEMVSale
@@ -146,11 +151,62 @@
             this.lblClock.TabIndex = 10;
             this.lblClock.Text = "00:00:00";
             // 
+            // btnRandomAmount
+            // 
+            this.btnRandomAmount.Location = new System.Drawing.Point(628, 12);
+            this.btnRandomAmount.Name = "btnRandomAmount";
+            this.btnRandomAmount.Size = new System.Drawing.Size(117, 42);
+            this.btnRandomAmount.TabIndex = 11;
+            this.btnRandomAmount.Text = "RND AMT";
+            this.btnRandomAmount.UseVisualStyleBackColor = true;
+            this.btnRandomAmount.Click += new System.EventHandler(this.btnRandomAmount_Click);
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Location = new System.Drawing.Point(639, 85);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(49, 13);
+            this.lblAmount.TabIndex = 12;
+            this.lblAmount.Text = "00:00:00";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(638, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Amount:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(639, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Invoice:";
+            // 
+            // lblInvoice
+            // 
+            this.lblInvoice.AutoSize = true;
+            this.lblInvoice.Location = new System.Drawing.Point(640, 125);
+            this.lblInvoice.Name = "lblInvoice";
+            this.lblInvoice.Size = new System.Drawing.Size(49, 13);
+            this.lblInvoice.TabIndex = 14;
+            this.lblInvoice.Text = "00:00:00";
+            // 
             // frmDsiEMVX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 525);
+            this.ClientSize = new System.Drawing.Size(757, 525);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblInvoice);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.btnRandomAmount);
             this.Controls.Add(this.lblClock);
             this.Controls.Add(this.btnSendTransaction);
             this.Controls.Add(this.txtResponse);
@@ -182,6 +238,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSendTransaction;
         private System.Windows.Forms.Label lblClock;
+        private System.Windows.Forms.Button btnRandomAmount;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblInvoice;
     }
 }
 

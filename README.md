@@ -7,7 +7,7 @@
 
 ##Overview
 
-This repository demonstrates how to integrate to an ActiveX control designed by Datacap Systems, Inc. and used to facilitate U.S. EMV payment card transactions.  Datacap's dsiEMVX is a pre-release version and will be renamed when officially released by Datacap.  For now we will refer to the control as dsiEMVX.  This readme will provide information on how to setup the software and hardware to enable EMV transactions and to successfully send:
+This repository demonstrates how to integrate to an ActiveX control designed by Datacap Systems, Inc. and used to facilitate U.S. EMV payment card transactions.  Datacap's dsiEMVX is a pre-release version and will be officially released from Datacap's download site.  This readme will provide information on how to setup the software and hardware to enable EMV transactions and to successfully send:
 
 * EMVParamDownload -- used to pull the proper EMV parameters to the hardware device.
 * EMVPadReset -- used to return the device to a ready state and ensure no card has been left in the chip reader.
@@ -38,7 +38,7 @@ The request looks like this:
   <Admin>
     <HostOrIP>127.0.0.1</HostOrIP>
     <IpPort>9000</IpPort>
-    <MerchantID>003503902913105</MerchantID>
+    <MerchantID>337234005</MerchantID>
     <TranCode>EMVParamDownload</TranCode>
     <SecureDevice>EMV_VX805_MERCURY</SecureDevice>
     <ComPort>9</ComPort>
@@ -86,7 +86,7 @@ Below is a sample EMV Sale transaction.
   <Transaction>
     <HostOrIP>127.0.0.1</HostOrIP>
     <IpPort>9000</IpPort>
-    <MerchantID>003503902913105</MerchantID>
+    <MerchantID>337234005</MerchantID>
     <TranCode>EMVSale</TranCode>
     <SecureDevice>EMV_VX805_MERCURY</SecureDevice>
     <ComPort>9</ComPort>
@@ -94,6 +94,8 @@ Below is a sample EMV Sale transaction.
     <RefNo>1</RefNo>
     <Purchase>1.11</Purchase>
     <SequenceNo>0010010000</SequenceNo>
+    <RecordNo>RecordNumberRequested</RecordNo>
+    <Frequency>OneTime</Frequency>    
   </Transaction>
 </TStream>
 ```
@@ -137,7 +139,7 @@ Here is the response to the above EMVSale transaction.  You will see that this i
 		</Amount>
 	</TranResponse>
 	<PrintData>
-		<Line1>.MERCHANT ID: 003503902913105</Line1>
+		<Line1>.MERCHANT ID: 337234005</Line1>
 		<Line2>.</Line2>
 		<Line3>.                  SALE                  </Line3>
 		<Line4>.</Line4>

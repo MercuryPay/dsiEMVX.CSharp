@@ -26,6 +26,10 @@ namespace dsiEMVX.CSharp
             {
                 return new EMVParamDownloadProcessor();
             }
+            else if (emvTransaction == EMVTransactions.ServerVersion)
+            {
+                return new ServerVersionProcessor();
+            }
             else
             {
                 return null;

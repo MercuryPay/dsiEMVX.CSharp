@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblInvoice = new System.Windows.Forms.Label();
+            this.btnServerVersion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEMVSale
@@ -59,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 149);
+            this.label1.Location = new System.Drawing.Point(12, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
@@ -107,7 +108,7 @@
             // 
             // txtRequest
             // 
-            this.txtRequest.Location = new System.Drawing.Point(15, 176);
+            this.txtRequest.Location = new System.Drawing.Point(15, 208);
             this.txtRequest.Multiline = true;
             this.txtRequest.Name = "txtRequest";
             this.txtRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -116,7 +117,7 @@
             // 
             // txtResponse
             // 
-            this.txtResponse.Location = new System.Drawing.Point(15, 360);
+            this.txtResponse.Location = new System.Drawing.Point(15, 392);
             this.txtResponse.Multiline = true;
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -126,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 333);
+            this.label2.Location = new System.Drawing.Point(12, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 7;
@@ -134,7 +135,7 @@
             // 
             // btnSendTransaction
             // 
-            this.btnSendTransaction.Location = new System.Drawing.Point(15, 70);
+            this.btnSendTransaction.Location = new System.Drawing.Point(15, 102);
             this.btnSendTransaction.Name = "btnSendTransaction";
             this.btnSendTransaction.Size = new System.Drawing.Size(607, 42);
             this.btnSendTransaction.TabIndex = 9;
@@ -145,7 +146,7 @@
             // lblClock
             // 
             this.lblClock.AutoSize = true;
-            this.lblClock.Location = new System.Drawing.Point(285, 127);
+            this.lblClock.Location = new System.Drawing.Point(285, 159);
             this.lblClock.Name = "lblClock";
             this.lblClock.Size = new System.Drawing.Size(49, 13);
             this.lblClock.TabIndex = 10;
@@ -197,11 +198,22 @@
             this.lblInvoice.TabIndex = 14;
             this.lblInvoice.Text = "00:00:00";
             // 
+            // btnServerVersion
+            // 
+            this.btnServerVersion.Location = new System.Drawing.Point(12, 56);
+            this.btnServerVersion.Name = "btnServerVersion";
+            this.btnServerVersion.Size = new System.Drawing.Size(117, 42);
+            this.btnServerVersion.TabIndex = 16;
+            this.btnServerVersion.Text = "SERVER VER";
+            this.btnServerVersion.UseVisualStyleBackColor = true;
+            this.btnServerVersion.Click += new System.EventHandler(this.btnServerVersion_Click);
+            // 
             // frmDsiEMVX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 525);
+            this.ClientSize = new System.Drawing.Size(757, 549);
+            this.Controls.Add(this.btnServerVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInvoice);
             this.Controls.Add(this.label3);
@@ -243,6 +255,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblInvoice;
+        private System.Windows.Forms.Button btnServerVersion;
     }
 }
 

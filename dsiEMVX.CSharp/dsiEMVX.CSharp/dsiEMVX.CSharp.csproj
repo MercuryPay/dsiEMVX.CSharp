@@ -50,6 +50,7 @@
     <Compile Include="EMVProcessor\EMVReturnProcessor.cs" />
     <Compile Include="EMVProcessor\EMVSaleProcessor.cs" />
     <Compile Include="EMVProcessor\EMVPadResetProcessor.cs" />
+    <Compile Include="EMVProcessor\ServerVersionProcessor.cs" />
     <Compile Include="EMVRequest.cs" />
     <Compile Include="EMVTransactions.cs" />
     <Compile Include="ConfigurationData.cs" />

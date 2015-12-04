@@ -107,5 +107,14 @@ namespace dsiEMVX.CSharp
         {
             lblAmount.Text = AmountGenerator.GenerateAmount(0.01, 10.00);
         }
+
+        private void btnServerVersion_Click(object sender, EventArgs e)
+        {
+            txtResponse.Text = string.Empty;
+
+            emvTransaction = EMVTransactions.ServerVersion;
+
+            txtRequest.Text = EMVRequest.GetServerVersionRequest(configData, GetTransData());
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace dsiEMVX.CSharp
         EMVPadReset,
         EMVSale,
         EMVReturn,
+        ServerVersion
     }
 }

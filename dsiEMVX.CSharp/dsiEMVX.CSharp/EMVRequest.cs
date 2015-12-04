@@ -86,5 +86,20 @@ namespace dsiEMVX.CSharp
             return XMLHelper.BuildXMLRequest(requestDictionary, "Transaction").ToString();
         }
 
+        public static string GetServerVersionRequest(ConfigurationData configData, TransactionData transData)
+        {
+            var requestDictionary = new Dictionary<string, object>();
+
+            requestDictionary.Add("HostOrIP", configData.NetEPayServer);
+            requestDictionary.Add("IpPort", configData.IpPort);
+            requestDictionary.Add("MerchantID", configData.MerchantId);
+            requestDictionary.Add("TranCode", "ServerVersion");
+            requestDictionary.Add("SecureDevice", configData.SecureDevice);
+            requestDictionary.Add("ComPort", configData.ComPort);
+            requestDictionary.Add("SequenceNo", "0010010000");
+
+            return XMLHelper.BuildXMLRequest(requestDictionary, "Admin").ToString();
+        }
+
     }
 }

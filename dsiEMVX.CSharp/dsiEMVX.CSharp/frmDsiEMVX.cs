@@ -149,7 +149,6 @@ namespace dsiEMVX.CSharp
                         {
                             if (beginStroke)
                             {
-                                //do nothing
                                 beginStroke = false;
                             }
                             else

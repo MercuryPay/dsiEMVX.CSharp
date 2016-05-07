@@ -116,5 +116,52 @@ namespace dsiEMVX.CSharp
 
             txtRequest.Text = EMVRequest.GetServerVersionRequest(configData, GetTransData());
         }
+
+        private void btnDemoSig_Click(object sender, EventArgs e)
+        {
+            var signatureData = "<Signature>79,27:79,27:79,26:79,26:79,26:79,27:79,28:77,30:73,33:69,38:66,44:62,52:56,62:48,72:42,79:39,82:39,81:#,#:79,29:79,29:78,28:80,26:82,26:81,30:77,36:75,40:74,44:75,47:76,50:78,51:84,48:92,41:101,33:108,27:110,26:109,26:109,28:109,30:109,31:109,34:107,40:103,49:97,58:93,65:88,71:87,74:#,#:133,38:133,38:133,38:132,40:129,47:124,54:121,59:117,65:114,70:#,#:130,39:130,39:130,39:135,35:145,29:157,24:166,23:#,#:125,52:125,52:122,53:125,52:136,48:147,47:152,48:#,#:114,69:114,69:112,69:117,68:129,65:139,63:147,62:#,#:199,30:199,30:197,31:196,35:195,40:195,45:191,54:182,63:174,72:171,76:173,76:182,72:198,69:216,67:231,66:239,66:240,67:238,68:#,#:</Signature>";
+            signatureData = signatureData.Replace("<Signature>", "");
+            signatureData = signatureData.Replace("</Signature>", "");
+            var stringOfPoints = signatureData.Split(':');
+
+            var beginStroke = true;
+
+            using (Graphics g = pbSignature.CreateGraphics())
+            {
+                g.Clear(Color.White);
+
+                var keepx = "";
+                var keepy = "";
+
+                foreach (var pointval in stringOfPoints)
+                {
+                    if (!String.IsNullOrEmpty(pointval))
+                    {
+                        var point = pointval.Split(',');
+                        var x = point[0];
+                        var y = point[1];
+
+                        if (x == "#" && y == "#")
+                        {
+                            beginStroke = true;
+                        }
+                        else
+                        {
+                            if (beginStroke)
+                            {
+                                //do nothing
+                                beginStroke = false;
+                            }
+                            else
+                            {
+                                g.DrawLine(new Pen(Color.Red), new Point(Convert.ToInt32(keepx), Convert.ToInt32(keepy)), new Point(Convert.ToInt32(x), Convert.ToInt32(y)));
+                            }
+                        }
+                        keepx = x;
+                        keepy = y;
+                    }
+                }
+            }
+        }
     }
 }

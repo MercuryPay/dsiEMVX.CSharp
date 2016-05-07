@@ -45,6 +45,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblInvoice = new System.Windows.Forms.Label();
             this.btnServerVersion = new System.Windows.Forms.Button();
+            this.btnDemoSig = new System.Windows.Forms.Button();
+            this.pbSignature = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSignature)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEMVSale
@@ -208,11 +211,31 @@
             this.btnServerVersion.UseVisualStyleBackColor = true;
             this.btnServerVersion.Click += new System.EventHandler(this.btnServerVersion_Click);
             // 
+            // btnDemoSig
+            // 
+            this.btnDemoSig.Location = new System.Drawing.Point(135, 56);
+            this.btnDemoSig.Name = "btnDemoSig";
+            this.btnDemoSig.Size = new System.Drawing.Size(117, 42);
+            this.btnDemoSig.TabIndex = 17;
+            this.btnDemoSig.Text = "DEMO SIG";
+            this.btnDemoSig.UseVisualStyleBackColor = true;
+            this.btnDemoSig.Click += new System.EventHandler(this.btnDemoSig_Click);
+            // 
+            // pbSignature
+            // 
+            this.pbSignature.Location = new System.Drawing.Point(15, 557);
+            this.pbSignature.Name = "pbSignature";
+            this.pbSignature.Size = new System.Drawing.Size(607, 200);
+            this.pbSignature.TabIndex = 18;
+            this.pbSignature.TabStop = false;
+            // 
             // frmDsiEMVX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 549);
+            this.ClientSize = new System.Drawing.Size(757, 780);
+            this.Controls.Add(this.pbSignature);
+            this.Controls.Add(this.btnDemoSig);
             this.Controls.Add(this.btnServerVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInvoice);
@@ -232,6 +255,7 @@
             this.Controls.Add(this.btnEMVSale);
             this.Name = "frmDsiEMVX";
             this.Text = "dsiEMVX.CSharp";
+            ((System.ComponentModel.ISupportInitialize)(this.pbSignature)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +280,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblInvoice;
         private System.Windows.Forms.Button btnServerVersion;
+        private System.Windows.Forms.Button btnDemoSig;
+        private System.Windows.Forms.PictureBox pbSignature;
     }
 }
 

@@ -1,4 +1,4 @@
-﻿# dsiEMVX.CSharp
+# dsiEMVX.CSharp
 
 * More documentation?  http://developer.mercurypay.com
 * Questions?  integrationteam@mercurypay.com
@@ -166,6 +166,9 @@ Here is the response to the above EMVSale transaction.  You will see that this i
 </RStream>
 
 ```
+
+##Additional Information
+* [Code sample on how to display captured signature](https://github.com/MercuryPay/dsiEMVX.CSharp/blob/master/dsiEMVX.CSharp/dsiEMVX.CSharp/frmDsiEMVX.cs#L120)
 
 ###©2015 Mercury Payment Systems, LLC - all rights reserved.
 

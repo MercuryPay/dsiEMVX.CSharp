@@ -16,7 +16,7 @@ namespace dsiEMVX.CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDsiEMVX());
+            Application.Run(new Market());
         }
     }
 }

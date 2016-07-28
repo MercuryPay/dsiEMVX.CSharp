@@ -58,6 +58,7 @@ namespace dsiEMVX.CSharp
             requestDictionary.Add("InvoiceNo", transData.InvoiceNo);
             requestDictionary.Add("RefNo", transData.InvoiceNo);
             requestDictionary.Add("Purchase", transData.Amount);
+            requestDictionary.Add("OperatorID", "test");
             requestDictionary.Add("SequenceNo", "0010010000");
             requestDictionary.Add("RecordNo", "RecordNumberRequested");
             requestDictionary.Add("Frequency", "OneTime");
